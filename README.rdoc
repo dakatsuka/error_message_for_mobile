@@ -1,0 +1,21 @@
+= error_message_for_mobile
+ActiveRecord, ActiveModelのエラー表示をガラパゴス携帯に適した感じにしてくれるRails3プラグインです。
+
+== インストール
+
+  gem install error_message_for_mobile
+
+== 使用方法
+
+  <%= form_for @hoge do |f| %>
+    <%= f.error_message_for_mobile :title, :append_text => t(), :prepend_text => t(), :color => "#ff0000" %>
+  <%= end %>
+
+* :append_text, :prepend_text, :colorは省略可能です。
+* :colorを指定するとエラーメッセージの色を変更出来ます。
+
+出力されるHTMLは下記のようになります。
+
+  <span style="color:#ff0000;">エラーメッセージ</span>
+
+Copyright (c) 2011 Dai Akatsuka, released under the MIT license
